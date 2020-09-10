@@ -32,9 +32,9 @@
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="#about-us" class="nav__link">About us</a></li>
           <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Consultation</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Testimonials</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+          <li class="nav__item"><a href="#consultation" class="nav__link">Consultation</a></li>
+          <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+          <li class="nav__item"><a href="#contact-us" class="nav__link">Contacts</a></li>
         </ul>
       </nav>
     </header>
@@ -52,11 +52,6 @@
 
       <section class="main__gallery gallery" id="gallery">
         <h2 class="gallery__title">Gallery</h2>
-        <img
-          src="./images/crown.svg"
-          alt="Miami logo"
-          class="gallery__crown"
-        >
 
         <article class="gallery__article">
           <div class="gallery__line gallery__line--first">
@@ -132,7 +127,183 @@
 
         <button class="gallery__button">View all</button>
       </section>
+
+      <section class="main__consultation consult" id="consultation">
+        <h2 class="consult__title">Consultation</h2>
+
+        <div class="consult__content">
+          <div class="consult__inf">
+            <h3 class="consult__foreword">How long have you do yourself a gift?</h3>
+            <p class="consult__text">The procedural change mezzo forte starts izoritmichesky pickup at these moments stop LA Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical.</p>
+          </div>
+
+          <form
+            action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+            class="consult__form form"
+            method="POST"
+          >
+            <label for="name">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                min="2"
+                placeholder="Name"
+                required
+                class="form__input"
+              >
+            </label>
+
+            <label for="phone">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Phone"
+                required
+                class="form__input"
+              >
+            </label>
+
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                pattern=".+@example.com"
+                required
+                class="form__input"
+              >
+            </label>
+
+            <input
+              type="submit"
+              value="Consultation"
+              class="form__submit"
+            >
+          </form>
+        </div>
+      </section>
+
+      <section class="main__testimonials testimonials" id="testimonials">
+        <h2 class="testimonials__title">Testimonials</h2>
+
+        <div class="testimonials__cards">
+          <div class="testimonials__item">
+            <img
+              src="./images/people/1.jpg"
+              alt="Leslie Mckinney"
+              class="testimonials__img"
+              >
+            <h3 class="testimonials__name">Leslie Mckinney</h3>
+            <span class="testimonials__position">CEO</span>
+            <p class="testimonials__comment">Nice work, Certificates National Association of Realtors (USA)</p>
+          </div>
+
+          <div class="testimonials__item">
+            <img
+              src="./images/people/2.jpg"
+              alt="Scarlett Hawkins"
+              class="testimonials__img"
+            >
+            <h3 class="testimonials__name">Scarlett Hawkins</h3>
+            <span class="testimonials__position">Senior Vice President</span>
+            <p class="testimonials__comment">My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I enjoy with all my heart</p>
+          </div>
+
+          <div class="testimonials__item">
+            <img
+              src="./images/people/3.jpg"
+              alt="Max Henry"
+              class="testimonials__img"
+            >
+            <h3 class="testimonials__name">Max Henry</h3>
+            <span class="testimonials__position">Chief Design Officer</span>
+            <p class="testimonials__comment">When my lovely valley of steam rises and half-day sun is above an impermeable</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__contact-us contact-us" id="contact-us">
+        <h2 class="contact-us__title">Contact us</h2>
+        <div class="contact-us__content">
+          <div class="contact-us__contacts">
+            <div>
+              <div class="contact-us__method">
+                <span class="contact-us__hint">Phone</span>
+                <p class="contact-us__contact">+1 234 5555-55-55</p>
+              </div>
+              <div class="contact-us__method">
+                <span class="contact-us__hint">Email</span>
+                <p class="contact-us__contact">hello@miami.com</p>
+              </div>
+            </div>
+            <div class="contact-us__method">
+              <span class="contact-us__hint">Address</span>
+              <p class="contact-us__contact">400 first ave. n. suite 700 Minneapolis, MN 55401</p>
+            </div>
+          </div>
+
+          <form
+            action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+            method="POST"
+            class="contact-us__form form"
+          >
+            <label for="Name">
+              <input
+                type="text"
+                id="Name"
+                name="name"
+                min="2"
+                placeholder="Name"
+                required
+                class="form__input"
+              >
+            </label>
+
+            <label for="Email">
+              <input
+                type="email"
+                name="email"
+                id="Email"
+                placeholder="Email"
+                pattern=".+@example.com"
+                required
+                class="form__input"
+              >
+            </label>
+
+            <label for="textarea">
+              <textarea
+                id="textarea"
+                name="textarea"
+                placeholder="Message"
+                class="form__input form__input--big"
+              >
+              </textarea>
+            </label>
+
+            <input
+              type="submit"
+              value="Consultation"
+              class="form__submit"
+            >
+          </form>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <a href="#" class="footer__logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Miami logo"
+          class="footer__logo-img"
+        >
+      </a>
+    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

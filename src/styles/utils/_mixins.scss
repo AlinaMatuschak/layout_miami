@@ -19,3 +19,23 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin titleForSection {
+  position: relative;
+  height: 80px;
+  font-size: 48px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 13px;
+    height: 10px;
+    background-image: url("/images/crown.svg");
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../utils/vars";
+
+.form {
+  width: $form-width;
+
+  &__input {
+    width: $input-width;
+    height: $input-height;
+    margin-bottom: 16px;
+    padding-left: $input-pudding-left;
+    font-size: 14px;
+    background-color: $input-background;
+    border-radius: $main-radius;
+
+    &--big {
+      height: 144px;
+    }
+  }
+
+  &__submit {
+    width: $input-submit-width;
+    height: $input-submit-height;
+    margin-top: 32px;
+    color: $text-light;
+    font-size: 16px;
+    background-color: $main-color;
+    border-radius: $main-radius;
+    cursor: pointer;
+    @include hover(box-shadow, 0px 6px 23px rgba(0, 117, 255, 0.46));
+  }
+}

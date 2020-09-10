@@ -1,0 +1,33 @@
+@import "../utils/vars";
+
+.consult {
+  height: $consult-height;
+  padding: $block-ver-padding $block-hor-padding;
+
+  &__title {
+    margin-bottom: 125px;
+    text-align: center;
+    @include titleForSection;
+  }
+
+  &__content {
+    @include flexCentering;
+    align-items: start;
+  }
+
+  &__inf {
+    max-width: 412px;
+  }
+
+  &__foreword {
+    max-width: 240px;
+    font-size: 24px;
+    line-height: 1.3;
+    color: $main-color;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

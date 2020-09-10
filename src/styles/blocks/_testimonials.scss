@@ -1,0 +1,45 @@
+@import "../utils/vars";
+
+.testimonials {
+  height: $testimonials-height;
+  padding: $block-ver-padding $block-hor-padding;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 125px;
+    @include titleForSection;
+  }
+
+  &__cards {
+    @include flexCentering;
+    align-items: start;
+  }
+
+  &__item {
+    max-width: 240px;
+    text-align: center;
+  }
+
+  &__img {
+    margin-bottom: 28px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    color: $main-color;
+    font-size: 24px;
+  }
+
+  &__position {
+    margin-bottom: 13px;
+    color: $hint-color;
+    font-size: 14px;
+  }
+
+  &__comment {
+    color: $text-dark;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../utils/vars";
+
+.contact-us {
+  height: $contact-us-height;
+  padding: $block-ver-padding $block-hor-padding;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 125px;
+    @include titleForSection;
+  }
+
+  &__content {
+    @include flexCentering;
+    align-items: start;
+  }
+
+  &__contacts {
+    @include flexCentering;
+    width: 430px;
+    align-items: start;
+  }
+
+  &__method {
+    max-width: 150px;
+    margin-bottom: 24px;
+  }
+
+  &__hint {
+    margin-bottom: 8px;
+    color: $hint-color;
+    font-size: 14px;
+  }
+
+  &__contact {
+    color: $text-dark;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
