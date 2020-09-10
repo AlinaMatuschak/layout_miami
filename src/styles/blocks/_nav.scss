@@ -1,0 +1,23 @@
+@import "./../utils/vars";
+
+.nav {
+  // position: sticky;
+  // top: 0;
+
+  &__list {
+    @include flexCentering;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    padding: 5px 15px;
+    text-decoration: none;
+    color: $text-light;
+    text-transform: uppercase;
+    @include hover(opacity, 0.8);
+    @include active;
+  }
+}
