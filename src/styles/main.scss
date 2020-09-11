@@ -2,6 +2,10 @@
 @import "fonts";
 @import "typography";
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -14,7 +18,8 @@ ul {
   padding: 0;
 }
 
-input {
+input,
+textarea {
   border-width: 0;
 }
 

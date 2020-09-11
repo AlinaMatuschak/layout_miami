@@ -1,8 +1,7 @@
 @import "../utils/vars";
 
 .gallery {
-  height: $gallery-height;
-  padding: $block-ver-padding $block-hor-padding;
+  padding: 50px $block-hor-padding;
   text-align: center;
 
   &__title {
@@ -64,12 +63,37 @@
     border: 2px solid $main-color;
     border-radius: $main-radius;
     cursor: pointer;
-    transition: color 0.3s, background-color 0.3s, border-color 0.5s;
+    transition: color 0.3s,font-size 0.3s, border-color 0.5s;
 
     &:hover {
-      color: $text-light;
-      background-color: $main-color;
-      border-color: $text-light;
+      color: $submit-hover;
+      font-size: 17px;
+      border-color: $submit-hover;
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 40px 20px;
+
+    &__article {
+      margin-bottom: 32px;
+    }
+
+    &__line {
+      margin-bottom: 16px;
+
+      &--first,
+      &--third {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__img {
+      height: 131px;
+    }
+
+    &__button {
+      width: 100%;
     }
   }
 }

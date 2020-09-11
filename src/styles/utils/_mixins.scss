@@ -1,5 +1,5 @@
 @mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.5s;
+  transition: #{$_property} 0.3s;
   &:hover {
     #{$_property}: $_toValue;
   }
@@ -11,6 +11,19 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
   }
+}
+
+@mixin positionCenteringHorizon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin positionCenteringAll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin flexCentering {
@@ -37,5 +50,10 @@
     background-size: cover;
     background-position: center;
     transform: translateX(-50%);
+  }
+
+  @media (max-width: 960px) {
+    height: 70px;
+    font-size: 36px;
   }
 }

@@ -18,4 +18,13 @@
   &__logo-img {
     width: inherit;
   }
+
+  @media (max-width: 960px) {
+    height: 206px;
+
+    &__logo-link {
+      bottom: 18px;
+      width: 77px;
+    }
+  }
 }

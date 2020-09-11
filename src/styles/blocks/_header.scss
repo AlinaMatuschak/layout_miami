@@ -1,32 +1,45 @@
 @import "./../utils/vars";
 
 .header {
+  position: relative;
   height: $header-height;
-  padding: $block-ver-padding $block-hor-padding;
+  padding: 56px $block-hor-padding;
 
   color: $text-light;
   font-size: 12px;
+  letter-spacing: 2px;
 
   background-image: url("/images/header.jpg");
   background-size: cover;
   background-position: center;
 
   &__contacts {
+    position: relative;
     @include flexCentering;
-    margin-bottom: 330px;
+    margin-bottom: 315px;
+  }
+
+  &__phone-icon {
+    display: none;
   }
 
   &__call {
     padding: 5px 15px;
     color: $text-light;
     text-decoration: none;
-    @include hover(opacity, 0.8);
     @include active;
+    @include hover(opacity, 0.8);
+
+    &::after {
+      content: "+1 234 555-55-55";
+    }
   }
 
   &__link-logo {
+    @include positionCenteringHorizon;
     width: 115px;
     height: 76px;
+    z-index: 2;
   }
 
   &__img-logo {
@@ -35,7 +48,7 @@
 
   &__title {
     position: relative;
-    width: 350px;
+    max-width: 370px;
     margin-bottom: 85px;
     font-size: 60px;
 
@@ -53,22 +66,117 @@
   &__call-back {
     position: relative;
     display: inline-block;
-    height: 28px;
+    padding: 5px 15px;
     line-height: 28px;
     color: $text-light;
     text-decoration: none;
     text-transform: uppercase;
-    @include hover(opacity, 0.8);
     @include active;
+    @include hover(opacity, 0.8);
 
     &::after {
       content: "";
-      position: absolute;
+      @include positionCenteringHorizon;
       bottom: 0;
-      left: 0;
-      width: 100%;
+      width: 78%;
       height: 1px;
       background-color: $text-light;
     }
+  }
+
+  &__menu-label {
+    display: none;
+    position: absolute;
+    top: 71px;
+    right: 25px;
+    width: 18px;
+    height: 12px;
+    z-index: 2;
+    cursor: pointer;
+    @include hover(opacity, 0.8);
+
+    &::after {
+      content: "";
+      position: relative;
+      bottom: 10px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-image: url("/images/menu.svg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__menu-input {
+    display: none;
+    width: 0;
+
+    &:checked ~ .header__navigation {
+      display: block;
+      transform: translateX(100%);
+      animation: appear 1s ease-out forwards;
+    }
+
+    &:checked + .header__menu-label {
+      &::after {
+        background-image: url("/images/cross.svg");
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 39px 23px;
+
+    &__contacts {
+      width: 100px;
+      margin-bottom: 470px;
+    }
+
+    &__phone-icon {
+      display: block;
+    }
+
+    &__call {
+      padding: 0;
+
+      &::after {
+        content: "";
+      }
+    }
+
+    &__link-logo {
+      width: 73px;
+      height: 48px;
+    }
+
+    &__call-back {
+      display: none;
+    }
+
+    &__menu-label {
+      display: block;
+    }
+
+    &__menu-input {
+      display: block;
+    }
+
+    &__title {
+      max-width: 266px;
+      font-size: 42px;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

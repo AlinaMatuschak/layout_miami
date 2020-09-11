@@ -3,11 +3,11 @@
 .about-us {
   @include flexCentering;
   align-items: start;
-  height: $about-us-height;
   padding: 120px $block-hor-padding;
 
   &__slogan {
     width: 780px;
+    margin-bottom: 48px;
     font-size: 48px;
   }
 
@@ -30,5 +30,22 @@
     font-size: 16px;
     line-height: 1.9;
     color: $text-dark;
+  }
+
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+    padding: 70px 20px;
+
+    &__slogan {
+      font-size: 36px;
+    }
+
+    &__title {
+      font-size: 23px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
   }
 }
