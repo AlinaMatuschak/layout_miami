@@ -14,9 +14,12 @@
   &__contacts {
     @include flexCentering;
     margin-bottom: 315px;
+    z-index: 2;
   }
 
-  &__phone-icon {
+  &__phone-link {
+    position: absolute;
+    top: 61px;
     display: none;
   }
 
@@ -25,10 +28,6 @@
     color: $text-light;
     @include active;
     @include hover(opacity, 0.8);
-
-    &::after {
-      content: "+1 234 555-55-55";
-    }
   }
 
   &__link-logo {
@@ -59,7 +58,7 @@
     }
   }
 
-  &__call-back {
+  &__order {
     position: relative;
     display: inline-block;
     padding: $link-padding;
@@ -111,6 +110,13 @@
       animation: appear 1s ease-out forwards;
     }
 
+    &:checked ~ .header__contacts {
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      animation: appear 1s ease-out forwards;
+    }
+
     &:checked + .header__menu-label {
       &::after {
         background-image: url("/images/cross.svg");
@@ -122,29 +128,20 @@
     padding: 39px 23px;
 
     &__contacts {
-      width: 100px;
-      margin-bottom: 470px;
+      position: absolute;
+      bottom: 145px;
+      display: none;
+      margin-bottom: 0;
+      line-height: 2.5;
     }
 
-    &__phone-icon {
+    &__phone-link {
       display: block;
-    }
-
-    &__call {
-      padding: 0;
-
-      &::after {
-        content: "";
-      }
     }
 
     &__link-logo {
       width: 73px;
       height: 48px;
-    }
-
-    &__call-back {
-      display: none;
     }
 
     &__menu-label {
@@ -157,6 +154,7 @@
 
     &__title {
       max-width: 266px;
+      margin-top: 470px;
       font-size: 42px;
     }
   }
