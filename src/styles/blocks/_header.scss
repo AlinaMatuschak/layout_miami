@@ -9,12 +9,9 @@
   font-size: 12px;
   letter-spacing: 2px;
 
-  background-image: url("/images/header.jpg");
-  background-size: cover;
-  background-position: center;
+  @include backgroundImage("/images/header.jpg");
 
   &__contacts {
-    position: relative;
     @include flexCentering;
     margin-bottom: 315px;
   }
@@ -24,9 +21,8 @@
   }
 
   &__call {
-    padding: 5px 15px;
+    padding: $link-padding;
     color: $text-light;
-    text-decoration: none;
     @include active;
     @include hover(opacity, 0.8);
 
@@ -66,10 +62,9 @@
   &__call-back {
     position: relative;
     display: inline-block;
-    padding: 5px 15px;
+    padding: $link-padding;
     line-height: 28px;
     color: $text-light;
-    text-decoration: none;
     text-transform: uppercase;
     @include active;
     @include hover(opacity, 0.8);
@@ -102,9 +97,7 @@
       display: block;
       width: 18px;
       height: 18px;
-      background-image: url("/images/menu.svg");
-      background-size: cover;
-      background-position: center;
+      @include backgroundImage("/images/menu.svg");
     }
   }
 
@@ -125,7 +118,7 @@
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 918px) {
     padding: 39px 23px;
 
     &__contacts {

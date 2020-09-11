@@ -3,16 +3,12 @@
 .footer {
   position: relative;
   height: $footer-height;
-  background-image: url("/images/footer.jpg");
-  background-size: cover;
-  background-position: center;
+  @include backgroundImage("/images/footer.jpg");
 
   &__logo-link {
-    position: absolute;
+    @include positionCenteringHorizon;
     bottom: 30px;
-    left: 50%;
     width: 115px;
-    transform: translateX(-50%);
   }
 
   &__logo-img {

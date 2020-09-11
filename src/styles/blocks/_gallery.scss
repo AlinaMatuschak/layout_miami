@@ -39,7 +39,7 @@
   &__img {
     height: 256px;
     width: 100%;
-    border-radius: $main-radius;
+    border-radius: $photo-radius;
     object-fit: cover;
   }
 
@@ -51,7 +51,6 @@
 
   &__link {
     color: $main-color;
-    text-decoration: none;
   }
 
   &__button {
@@ -61,9 +60,9 @@
     color: $main-color;
     background-color: $text-light;
     border: 2px solid $main-color;
-    border-radius: $main-radius;
+    border-radius: $button-radius;
     cursor: pointer;
-    transition: color 0.3s,font-size 0.3s, border-color 0.5s;
+    transition: color 0.3s, font-size 0.3s, border-color 0.5s;
 
     &:hover {
       color: $submit-hover;
@@ -73,7 +72,7 @@
   }
 
   @media (max-width: 960px) {
-    padding: 40px 20px;
+    padding: $svp-block-padding;
 
     &__article {
       margin-bottom: 32px;

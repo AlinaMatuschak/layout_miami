@@ -39,7 +39,7 @@
   }
 
   @media (max-width: 960px) {
-    padding: 40px 20px;
+    padding: $svp-block-padding;
 
     &__title {
       margin-bottom: 53px;

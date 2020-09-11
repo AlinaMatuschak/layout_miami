@@ -17,15 +17,14 @@
   }
 
   &__link {
-    padding: 5px 15px;
-    text-decoration: none;
+    padding: $link-padding;
     color: $text-light;
     text-transform: uppercase;
     @include active;
     @include hover(opacity, 0.8);
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 918px) {
     display: none;
     height: 100%;
     background-color: $main-color;

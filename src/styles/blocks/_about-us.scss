@@ -6,18 +6,19 @@
   padding: 120px $block-hor-padding;
 
   &__slogan {
-    width: 780px;
+    max-width: 780px;
     margin-bottom: 48px;
+    margin-right: 15px;
     font-size: 48px;
   }
 
   &__emphasis {
-    font-weight: 700;
+    font-weight: bold;
     color: $main-color;
   }
 
   &__inf {
-    width: 533px;
+    max-width: 533px;
   }
 
   &__title {
@@ -32,12 +33,13 @@
     color: $text-dark;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 800px) {
     flex-wrap: wrap;
-    padding: 70px 20px;
+    padding: 80px $svp-hor-padding;
 
     &__slogan {
       font-size: 36px;
+      margin-right: 0;
     }
 
     &__title {

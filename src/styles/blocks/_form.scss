@@ -10,7 +10,7 @@
     padding-left: $input-padding-left;
     font-size: 14px;
     background-color: $input-background;
-    border-radius: $main-radius;
+    border-radius: $input-radius;
 
     &--big {
       height: 144px;
@@ -24,8 +24,8 @@
     color: $text-light;
     font-size: 16px;
     background-color: $main-color;
-    border-radius: $main-radius;
-    box-shadow : 0 6px 23px rgba(0, 117, 255, 0.46);
+    border-radius: $input-radius;
+    box-shadow: $submit-shadow;
     cursor: pointer;
     @include hover(
       background-color,

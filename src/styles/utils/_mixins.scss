@@ -5,6 +5,12 @@
   }
 }
 
+@mixin backgroundImage ($url) {
+  background-image: url(#{$url});
+  background-size: cover;
+  background-position: center;
+}
+
 @mixin active {
   transition: background-color 0.3s;
   &:active {
