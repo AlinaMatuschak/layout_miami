@@ -3,7 +3,7 @@
 .about-us {
   @include flexCentering;
   align-items: start;
-  padding: 120px $block-hor-padding;
+  padding: 135px $block-hor-padding;
 
   &__slogan {
     max-width: 780px;

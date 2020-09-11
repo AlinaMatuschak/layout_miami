@@ -9,6 +9,8 @@ a {
 }
 
 p,
-span {
+span,
+input,
+textarea {
   @extend %fontNormal;
 }
