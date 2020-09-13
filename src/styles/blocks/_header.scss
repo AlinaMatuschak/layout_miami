@@ -101,25 +101,6 @@
 
   &__menu-input {
     display: none;
-
-    &:checked ~ .header__navigation {
-      display: block;
-      transform: translateX(100%);
-      animation: appear 1s ease-out forwards;
-    }
-
-    &:checked ~ .header__contacts {
-      display: flex;
-      flex-direction: column;
-      transform: translateX(100%);
-      animation: appear 1s ease-out forwards;
-    }
-
-    &:checked + .header__menu-label {
-      &::after {
-        background-image: url("/images/cross.svg");
-      }
-    }
   }
 
   @media (max-width: 918px) {
@@ -149,6 +130,25 @@
     &__menu-input {
       display: block;
       width: 0;
+
+      &:checked ~ .header__navigation {
+        display: block;
+        transform: translateX(100%);
+        animation: appear 1s ease-out forwards;
+      }
+  
+      &:checked ~ .header__contacts {
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        animation: appear 1s ease-out forwards;
+      }
+  
+      &:checked + .header__menu-label {
+        &::after {
+          background-image: url("/images/cross.svg");
+        }
+      }
     }
 
     &__title {
