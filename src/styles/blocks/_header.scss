@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   height: $header-height;
   padding: 56px $block-hor-padding;
 
@@ -104,6 +103,7 @@
   }
 
   @media (max-width: 918px) {
+    position: relative;
     padding: 39px 23px;
 
     &__contacts {

@@ -12,6 +12,11 @@
 
     &--big {
       height: 144px;
+      padding: 17px;
+    }
+
+    &::placeholder {
+      color: $hint-color;
     }
   }
 
