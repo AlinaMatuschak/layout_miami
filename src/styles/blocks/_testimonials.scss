@@ -53,4 +53,9 @@
       align-items: center;
     }
   }
+
+  @media (min-width: 1300px) {
+    width: 1260px;
+    margin: 0 auto;
+  }
 }
