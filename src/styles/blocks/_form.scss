@@ -1,0 +1,42 @@
+.form {
+  width: $form-width;
+
+  &__input {
+    width: 100%;
+    height: $input-height;
+    margin-bottom: 16px;
+    padding-left: $input-padding-left;
+    font-size: 14px;
+    background-color: $input-background;
+    border-radius: $input-radius;
+
+    &--big {
+      height: 144px;
+      padding: 17px;
+    }
+
+    &::placeholder {
+      color: $hint-color;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    height: $input-submit-height;
+    margin-top: 32px;
+    color: $text-light;
+    font-size: 16px;
+    background-color: $main-color;
+    border-radius: $input-radius;
+    box-shadow: $submit-shadow;
+    cursor: pointer;
+    @include hover(
+      background-color,
+      $submit-hover
+    );
+  }
+
+  @media (max-width: 960px) {
+    width: 280px;
+  }
+}
